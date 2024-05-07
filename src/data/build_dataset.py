@@ -6,7 +6,7 @@ def build_dataset():
     ds = Dataset(jsonld="https://www.kaggle.com/datasets/jocelyndumlao/cardiovascular-disease-dataset/croissant/download")
     records = ds.records(ds.metadata.record_sets[0].id)
     df = pd.DataFrame(records)
-    print(df)
+    return df
 
 if __name__ == '__main__':
     build_dataset()

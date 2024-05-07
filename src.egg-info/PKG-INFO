@@ -9,3 +9,4 @@ Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: mlcroissant
 Requires-Dist: tensorflow_datasets
+Requires-Dist: scikit-learn

@@ -7,5 +7,5 @@ setup(
     description="Exploring classical machine learning techniques include Decision Tree, Nearest Neighbour, and Logistic Regression",
     author='Lily Ren',
     license='MIT',
-    install_requires=['pandas','numpy','mlcroissant','tensorflow_datasets','itertools']
+    install_requires=['pandas','numpy','mlcroissant','tensorflow_datasets','scikit-learn']
 )

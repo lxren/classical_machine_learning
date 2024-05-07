@@ -2,3 +2,4 @@ pandas
 numpy
 mlcroissant
 tensorflow_datasets
+scikit-learn
