@@ -2,6 +2,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
 from sklearn import tree
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def build_DecisionTree(df):
     y = df['target']
@@ -11,6 +13,9 @@ def build_DecisionTree(df):
     model.fit(X_train,y_train)
     y_pred = model.predict(X_test)
     print(f'accurancy: {metrics.accuracy_score(y_test,y_pred):.2f} recall: {metrics.recall_score(y_test,y_pred):.2f} precision: {metrics.precision_score(y_test,y_pred):.2f}')
+    confusion_matrix = metrics.confusion_matrix(y_test,y_pred)
+    sns.heatmap(confusion_matrix,annot=True)
+    plt.show()
 
 if __name__ == '__main__':
     build_DecisionTree()

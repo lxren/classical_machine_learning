@@ -10,3 +10,6 @@ Requires-Dist: numpy
 Requires-Dist: mlcroissant
 Requires-Dist: tensorflow_datasets
 Requires-Dist: scikit-learn
+Requires-Dist: argparse
+Requires-Dist: matplotlib
+Requires-Dist: seaborn

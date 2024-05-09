@@ -3,3 +3,6 @@ numpy
 mlcroissant
 tensorflow_datasets
 scikit-learn
+argparse
+matplotlib
+seaborn
