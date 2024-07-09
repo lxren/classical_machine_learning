@@ -5,6 +5,7 @@ sys.dont_write_bytecode = True
 from data.build_dataset import build_dataset
 from models.build_DecisionTree import build_DecisionTree
 from models.build_kNN import build_kNN
+from models.build_LR import build_LR
 
 #setup global dataframe variable
 df = build_dataset()
@@ -35,7 +36,8 @@ if __name__ == '__main__':
             n_kfold = int(n_kfold_str)
             build_kNN(df, n_kfold)
         case "LogisticRegression":
-            print("LR")
+            reg = input("Please provide the desired regression / penalty term, 'l1' for Lasso Regression and 'l2' for Ridge Regression ")
+            build_LR(df, reg)
         case _:
             print("Invalid model choice. Please select from 'DecisionTree', 'KNearestNeighbors', or 'LogisticRegression'.")
     
