@@ -17,10 +17,6 @@ def build_DecisionTree(df):
     confusion_matrix = metrics.confusion_matrix(y_test,y_pred)
     heatmap = sns.heatmap(confusion_matrix,annot=True)
     plt.show()
-    plt.title('Decision Tree Confusion Matrix')
-    plt.xlabel('Predicted labels')
-    plt.ylabel('True labels')
-    plt.savefig('./src/visualization/DecisionTree_ConfusionMatrix.png')
 
 if __name__ == '__main__':
     build_DecisionTree()
