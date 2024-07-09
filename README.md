@@ -30,3 +30,9 @@ python ./src/main.py --model <model_name>
 
 model_name: DecisionTree|KNearestNeighbors|LogisticRegression
 ```
+### Select number of folds for Stratefied K-Fold cross-validator for kNN
+```bash
+python ./src/main.py --model <KNearestNeighbors>
+
+<int>
+```
