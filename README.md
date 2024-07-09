@@ -24,7 +24,7 @@ python ./src/data/build_dataset.py
 ```bash
 python ./src/main.py --verbose
 ```
-### Build Model (choose between DecisionTree, KNearestNeighbors, and LogisticRegression)
+### Build model (choose between DecisionTree, KNearestNeighbors, and LogisticRegression)
 ```bash
 python ./src/main.py --model <model_name>
 
