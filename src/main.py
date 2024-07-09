@@ -4,7 +4,9 @@ import sys
 sys.dont_write_bytecode = True
 from data.build_dataset import build_dataset
 from models.build_DecisionTree import build_DecisionTree
+from models.build_kNN import build_kNN
 
+#setup global dataframe variable
 df = build_dataset()
 
 # build_DecisionTree(df)
@@ -29,9 +31,13 @@ if __name__ == '__main__':
         case "DecisionTree":
             build_DecisionTree(df)
         case "KNearestNeighbors":
-            print('KNN')
+            n_kfold_str = input("Please provide the number of folds for Stratified K-Fold cross-validator")
+            n_kfold = int(n_kfold_str)
+            build_kNN(df, n_kfold)
         case "LogisticRegression":
             print("LR")
+        case _:
+            print("Invalid model choice. Please select from 'DecisionTree', 'KNearestNeighbors', or 'LogisticRegression'.")
     
     
     #output = build_model(model)
