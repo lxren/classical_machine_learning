@@ -24,9 +24,15 @@ python ./src/data/build_dataset.py
 ```bash
 python ./src/main.py --verbose
 ```
-### Build Model (choose between DecisionTree, KNearestNeighbors, and LogisticRegression)
+### Build model (choose between DecisionTree, KNearestNeighbors, and LogisticRegression)
 ```bash
 python ./src/main.py --model <model_name>
 
 model_name: DecisionTree|KNearestNeighbors|LogisticRegression
+```
+### Select number of folds for Stratefied K-Fold cross-validator for kNN (the output will include 1-9 neighbors and euclidean, manhattan, and chebyshev distances)
+```bash
+python ./src/main.py --model <KNearestNeighbors>
+
+<int>
 ```
