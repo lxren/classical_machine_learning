@@ -4,6 +4,7 @@ from sklearn import metrics
 from sklearn import tree
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 def build_DecisionTree(df):
     y = df['target']
@@ -14,8 +15,12 @@ def build_DecisionTree(df):
     y_pred = model.predict(X_test)
     print(f'accurancy: {metrics.accuracy_score(y_test,y_pred):.2f} recall: {metrics.recall_score(y_test,y_pred):.2f} precision: {metrics.precision_score(y_test,y_pred):.2f}')
     confusion_matrix = metrics.confusion_matrix(y_test,y_pred)
-    sns.heatmap(confusion_matrix,annot=True)
+    heatmap = sns.heatmap(confusion_matrix,annot=True)
     plt.show()
+    plt.title('Decision Tree Confusion Matrix')
+    plt.xlabel('Predicted labels')
+    plt.ylabel('True labels')
+    plt.savefig('./src/visualization/DecisionTree_ConfusionMatrix.png')
 
 if __name__ == '__main__':
     build_DecisionTree()
