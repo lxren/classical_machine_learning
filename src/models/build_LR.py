@@ -16,7 +16,7 @@ def build_LR(df,reg):
     model.fit(X_train_norm, y_train)
     y_pred = model.predict(X_test_norm)
 
-    print(f"Classification report for -{reg}- regularization:/n{classification_report(y_test, y_pred)}")
+    print(f"Classification report for -{reg}- regularization:\n{classification_report(y_test, y_pred)}")
 
 if __name__ == '__main__':
     build_LR()
