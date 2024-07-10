@@ -41,6 +41,8 @@ python ./src/main.py --model <KNearestNeighbors>
 *L1 - Lasso Regression, L2 - Ridge Regression*
 ```bash
 python ./src/main.py --model <LogisticRegression>
+
 <penalty>
+
 penalty: l1|l2
 ```
