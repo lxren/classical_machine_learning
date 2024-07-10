@@ -1,6 +1,8 @@
 from mlcroissant import Dataset
 import itertools
 import pandas as pd
+import absl.logging
+absl.logging.set_verbosity(absl.logging.ERROR)
 
 def build_dataset():
     ds = Dataset(jsonld="https://www.kaggle.com/datasets/jocelyndumlao/cardiovascular-disease-dataset/croissant/download")
